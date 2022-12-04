@@ -6,11 +6,18 @@ import { AppComponent } from './app.component';
 import { StudentComponent } from './student/student.component';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { RouterModule, Routes } from '@angular/router';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    StudentComponent
+    StudentComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
