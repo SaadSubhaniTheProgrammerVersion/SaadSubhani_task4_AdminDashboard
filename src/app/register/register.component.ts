@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
-
+registered(){
+  alert('User registered successfully');
+}
 }

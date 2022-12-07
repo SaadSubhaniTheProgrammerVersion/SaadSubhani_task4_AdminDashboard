@@ -42,14 +42,19 @@ export class StudentComponent {
   }
   
   onSubmit(form: NgForm) {
-    console.log(form.value);
     if (this.studentService.selectedStudent._id == "") {
       this.studentService.postStudent(form.value).subscribe((res) => {
-        this.resetForm(form);
+        this.resetForm(form);;
         this.refreshStudentList();
-        M.toast({ html: 'Submitted successfully', classes: 'rounded' });
+        if(res==true){
+        M.toast({ html: 'Saved successfully', classes: 'rounded'});
+        }
+        else{
+          alert('CMS already exists');
+        }
       });
-    }
+     
+  }
     else {
       this.studentService.putStudent(form.value).subscribe((res) => {
         this.resetForm(form);
